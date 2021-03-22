@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="269.0" prefWidth="298.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="survey.Controller">
+   <children>
+      <Button fx:id="okBtn" layoutX="48.0" layoutY="231.0" mnemonicParsing="false" onAction="#okProc" prefHeight="22.0" prefWidth="60.0" text="확인" />
+      <Button fx:id="cancelBtn" layoutX="119.0" layoutY="231.0" mnemonicParsing="false" onAction="#cancelProc" prefHeight="22.0" prefWidth="60.0" text="취소" />
+      <Button fx:id="resultBtn" layoutX="194.0" layoutY="231.0" mnemonicParsing="false" onAction="#resultProc" text="결과보기" />
+      <Label layoutX="99.0" layoutY="14.0" prefHeight="30.0" prefWidth="99.0" text="설문조사">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Overseas" layoutX="14.0" layoutY="56.0" prefHeight="30.0" prefWidth="146.0" text="여행하고 싶은 곳">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="place0" layoutX="35.0" layoutY="86.0" mnemonicParsing="false" selected="true" text="해외여행">
+         <toggleGroup>
+            <ToggleGroup fx:id="place" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="place1" layoutX="114.0" layoutY="86.0" mnemonicParsing="false" text="국내여행" toggleGroup="$place" />
+      <RadioButton fx:id="place2" layoutX="198.0" layoutY="86.0" mnemonicParsing="false" text="없음" toggleGroup="$place" />
+      <Label layoutX="14.0" layoutY="109.0" prefHeight="30.0" prefWidth="87.0" text="연령구분">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="age0" layoutX="35.0" layoutY="140.0" mnemonicParsing="false" selected="true" text="10대">
+         <toggleGroup>
+            <ToggleGroup fx:id="age" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="age1" layoutX="92.0" layoutY="140.0" mnemonicParsing="false" text="20대" toggleGroup="$age" />
+      <RadioButton fx:id="age2" layoutX="149.0" layoutY="140.0" mnemonicParsing="false" text="30대" toggleGroup="$age" />
+      <RadioButton fx:id="age3" layoutX="203.0" layoutY="140.0" mnemonicParsing="false" text="40대" toggleGroup="$age" />
+      <Label layoutX="14.0" layoutY="163.0" prefHeight="30.0" prefWidth="87.0" text="성별">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="man" layoutX="35.0" layoutY="193.0" mnemonicParsing="false" selected="true" text="남성">
+         <toggleGroup>
+            <ToggleGroup fx:id="sex" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="woman" layoutX="92.0" layoutY="193.0" mnemonicParsing="false" text="여성" toggleGroup="$sex" />
+   </children>
+</AnchorPane>
